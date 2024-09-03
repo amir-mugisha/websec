@@ -1,0 +1,20 @@
+rules:
+  - id: no-hardcoded-secrets
+    patterns:
+      - pattern: $SECRET = "..."
+    message: "Avoid hardcoding secrets in your code."
+    languages: [java]
+    severity: ERROR
+
+  - id: no-public-fields
+    patterns:
+      - pattern: public $TYPE $FIELD;
+    message: "Avoid using public fields."
+    languages: [java]
+    severity: WARNING
+  - id: no-deprecated-methods
+    patterns:
+      - pattern: @Deprecated
+    message: "Avoid using deprecated methods."
+    languages: [ java ]
+    severity: WARNING
